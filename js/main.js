@@ -12,6 +12,15 @@ function carregar(){
     var hora = data.getHours();
     var minuto = data.getMinutes();
     var segundo = data.getSeconds();
+    if(String(segundo).length == 1){
+        segundo = '0'+segundo;
+    }
+    if(String(minuto).length == 1){
+        minuto = '0'+minuto;
+    }
+    if(String(hora).length == 1){
+        hora = '0'+hora;
+    }
     msg.innerText = hora +':' + minuto + ':' + segundo;
 
     if((hora >= 0) && (hora < 6)){
