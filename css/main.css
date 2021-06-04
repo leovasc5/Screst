@@ -21,14 +21,14 @@ section{
     box-shadow: 5px 5px 10px #301f1f;
 }
 
-.clima{
-    width: 25%;
-    background-color: wheat;
-    bottom: 20px;
-    border-radius: 12px;
-    padding: 15px;
-    margin: auto;
-    box-shadow: 5px 5px 10px #301f1f;
+.img{
+    height:25%;
+}
+
+@media (min-width: 48em){
+    img{
+        width:'50%';
+    }
 }
 
 /* Criado por Leonardo Vasconcelos Paulino

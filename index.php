@@ -9,7 +9,7 @@
     <link href="img/time.ico" type="image/x-icon" rel="icon"/>
     <title>Screst</title>
 </head>
-<body id='body' onload='carregar()'>
+<body id='body'>
     <header>
         <h1 id='tit'>Screst</h1>
     </header>
@@ -26,7 +26,7 @@
             echo getCity();
         ?>
         <div id='foto'>
-            <img id='img' width='50%'>
+            <img id='img' width='30%'>
         </div>
     </section>
 
