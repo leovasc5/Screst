@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='css/main.css'>
     <script src='js/main.js'></script>
     <link href="img/time.ico" type="image/x-icon" rel="icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Screst</title>
 </head>
 <body id='body'>
@@ -20,9 +21,9 @@
         </div></h3>
         <?php
             include "php/dados.php";
-            echo getDateToday().'<hr>';
-            echo getIcon().'<br>';
-            echo '<b>'.getTemp().'ºC</b><br>';
+            echo getDateToday()."<hr>";
+            echo getIcon()."<br>";
+            echo "<b>".getTemp()."ºC</b><a href='index.php' title='Atualizar'><i class='fa fa-refresh'></i></a><br>";
             echo getCity();
         ?>
         <div id='foto'>

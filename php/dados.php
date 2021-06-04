@@ -19,8 +19,9 @@
 
     function getIcon(){
         $icon = $GLOBALS['resultado']->weather[0]->icon;
+        $description = $GLOBALS['resultado']->weather[0]->description;
         $url_icon = "http://openweathermap.org/img/wn/$icon@2x.png";
-        return $img = "<img src='$url_icon'/>"; 
+        return $img = "<img src='$url_icon' title='$description'/>"; 
     }
 
     function getCity(){

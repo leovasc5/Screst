@@ -8,6 +8,7 @@ function update(){
     var body = document.querySelector('#body');
     var titulo = document.querySelector('#tit');
     var fundo = document.querySelector('.time');
+    var icon = document.querySelector('.fa');
 
     var data = new Date();
     var hora = data.getHours();
@@ -30,18 +31,21 @@ function update(){
         titulo.innerText = 'Boa madrugada!';
         titulo.style.color = '#f4f4f4';
         fundo.style.color = '#ffffff';
+        icon.style.color = '#ffffff';
         fundo.style.backgroundColor = '#065753';
     }else if((hora >= 6) && (hora < 12)){
         img.src = 'img/manha.png';
         body.style.backgroundColor = '#87CEFA';
         titulo.innerText = 'Boa dia!';
         fundo.style.color = '#000';
+        icon.style.color = '#000';
         fundo.style.backgroundColor = '#67BA3F';
     }else if((hora >= 12) && (hora < 18)){
         img.src = 'img/tarde.png';
         body.style.backgroundColor = '#00BFFF';
         titulo.innerText = 'Boa tarde!';
         fundo.style.color = '#000';
+        icon.style.color = '#000';
         fundo.style.backgroundColor = '#00DAAB';
     }else if((hora >= 18) && (hora < 24)){
         img.src = 'img/noite.png';
@@ -49,6 +53,7 @@ function update(){
         titulo.innerText = 'Boa noite!';
         titulo.style.color = '#f4f4f4';
         fundo.style.color = '#ffffff';
+        icon.style.color = '#ffffff';
         fundo.style.backgroundColor = '#053E4D';
     }
 

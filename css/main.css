@@ -25,6 +25,10 @@ section{
     height:25%;
 }
 
+i{
+    margin-left:10px;
+}
+
 @media (min-width: 48em){
     img{
         width:'50%';
