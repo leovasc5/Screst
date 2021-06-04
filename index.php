@@ -13,16 +13,18 @@
     <header>
         <h1 id='tit'>Screst</h1>
     </header>
-
-    <?php 
-        // echo include "php/dados.php";
-    ?>
-    
-    <section>
+        
+    <section class="time">
         <h3><div id='msg'>
-            Error: Comunique o desenvolvedor!
+            Carregando...
         </div></h3>
-
+        <?php
+            include "php/dados.php";
+            echo getDateToday().'<hr>';
+            echo getIcon().'<br>';
+            echo '<b>'.getTemp().'ºC</b><br>';
+            echo getCity();
+        ?>
         <div id='foto'>
             <img id='img' width='50%'>
         </div>

@@ -2,18 +2,29 @@
     $GLOBALS['url'] = "https://api.openweathermap.org/data/2.5/weather?q=Osasco&units=metric&appid=acaa4fb70c1dcd3b8897305815823f7f";
     $GLOBALS['resultado'] = json_decode(file_get_contents($GLOBALS['url']));
 
-    echo getTemp();
-    echo getIcon();
-    echo getDateToday();
-
     function getTemp(){
-        return $temp = $GLOBALS['resultado']->main->temp;
+        $temp = $GLOBALS['resultado']->main->temp;
+        $temp = '16.30';
+        if(strlen($temp) == 5 && substr($temp, 4) != '0'){
+            $temp = substr($temp, 0, 4);
+        }
+        if(strlen($temp) == 4){
+            $temp = substr($temp, 0, 2);
+        }
+        if(strlen($temp) == 5 && substr($temp, 4) == '0'){
+            $temp = substr($temp, 0, 4);
+        }
+        return $temp;
     }
 
     function getIcon(){
         $icon = $GLOBALS['resultado']->weather[0]->icon;
         $url_icon = "http://openweathermap.org/img/wn/$icon@2x.png";
         return $img = "<img src='$url_icon'/>"; 
+    }
+
+    function getCity(){
+        return $GLOBALS['resultado']->name.'-SP';
     }
 
     function getDateToday(){

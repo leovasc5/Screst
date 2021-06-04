@@ -9,6 +9,10 @@ header{
 }
 
 section{
+    text-align: center;
+}
+
+.time{
     background-color: #f4f4f4;
     border-radius: 12px;
     width: 50%;
@@ -17,9 +21,14 @@ section{
     box-shadow: 5px 5px 10px #301f1f;
 }
 
-div{
-    text-align: center;
-    padding: 8px;
+.clima{
+    width: 25%;
+    background-color: wheat;
+    bottom: 20px;
+    border-radius: 12px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #301f1f;
 }
 
 /* Criado por Leonardo Vasconcelos Paulino
